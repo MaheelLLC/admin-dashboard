@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Dashboard</title>
+  <!-- link the css -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- i think this contains the entire html -->
+  <div class="container">
+    <!-- the header section holds the greeting and menu sections -->
+    <section class="header">
+      <!-- the greeting section contains the greeting text and user icon -->
+      <div class="greeting">
+        <div class="greeting-text">Welcome Back, Zuko!</div>
+        <img src="./images/zuko-avatar.png" alt="zuko">
+      </div>
+      <!-- the menu section contains home, settings, and search -->
+      <div class="menu">
+        <!-- the home part has the home text and icon -->
+        <!-- the title attribute provides the text its equal to when the user 
+         cursor hovers over it. In this case, when the user hovers over the home 
+         element, the Home text will appear next to the mouse. -->
+        <div class="home" title="Home">
+          <!-- this element creates an SVG container that is 24x24 pixels -->
+          <!-- xmlns means XML namespace. It tells the browser that this element
+          should be treated as an svg element which is defined by the W3C. You
+          can find that definition in the link that xmlns is set equal to. -->
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <!-- this element embeds (or places in) an external svg image within
+            this svg container. -->
+            <image href="./images/home.svg" />
+          </svg>
+          <!-- home text -->
+          <h3>Home</h3>
+        </div>
+
+        <!-- settings is just like home, provides settings text and icon -->
+        <div class="settings" title="Settings">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <image href="./images/settings.svg" />
+          </svg>
+          <h3>Settings</h3>
+        </div>
+
+        <!-- the search section is a little different. It contains a search bar,
+         search text, and search icon. The search bar is actually a user input 
+         form. -->
+        <!-- aria-label just provides screen readers the word to say to their 
+        visually impaired users -->
+        <div class="search" aria-label="search" title="Search">
+          <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+            <image href="./images/search.svg" />
+          </svg>
+          <!-- We have defined a form to collect user input. -->
+          <!-- action tells the code where to send the user input, so usually, 
+           action is set equal to a URL. In other words, it specifies the URL 
+           where the form's data should be sent when the form is submitted by 
+           the user. Furthermore, unless otherwise, the action attribute also 
+           redirects the user to that same URL once the user clicks the submit 
+           button. the method attribute defines how the form data will be sent
+           the server (either get or post). Setting it to get sends the data 
+           by appending to the current URL. Post actually sends it to the server.
+           In this case, action is set equal to the current page (#) and method
+           will simply append to the URL. -->
+          <form action="#" method="get">
+            <!-- the user input is simply text that will go inside the search bar
+             (text box). The variable that will store the user's input once it
+             is sent to the server is called search-query. Therefore, if the 
+             server that receives this form data wants the text value of this 
+             input, it will have to call the variable name search-query. 
+             placeholder simply places placeholder text "Search" into the search 
+             bar. -->
+            <input type="text" placeholder="Search" name="search-query">
+          </form>
+          <h3>Search</h3>
+        </div>
+      </div>
+    </section>
+    <!-- the sidebar section has a music logo and a control panel
+     the control panel has two versions: a desktop and mobile version. -->
+    <section class="sidebar">
+      <div class="music-logo">
+        <!-- The image logo is also a link to my github -->
+        <a href="https://github.com/MaheelLLC">
+          <img src="./images/logo.png" alt="Logo">
+        </a>
+      </div>
+      <!-- the control panel where the user performs commands has its first 
+       version: the desktop version -->
+      <div class="control-panel desktop">
+        <!-- there are 4 subpanels within the control panel. The first one 
+         contains options for the user to listen to. -->
+        <div class="listen-panel sub-panel">
+          <h3>Listen</h3>
+          <!-- ul means unordered list -->
+          <ul>
+            <!-- ol means ordered list -->
+            <li>Playlists</li>
+            <li>Podcasts & Shows</li>
+            <li>Audiobooks</li>
+          </ul>
+        </div>
+        <!-- the second panel shows options for users to watch -->
+        <div class="watch-panel sub-panel">
+          <h3>Watch</h3>
+          <ul>
+            <li>Music Videos</li>
+            <li>Live Performances</li>
+            <li>Reels and Shorts</li>
+          </ul>
+        </div>
+        <div class="experience-panel sub-panel">
+          <h3>Experience</h3>
+          <ul>
+            <li>Events</li>
+            <li>Festivals</li>
+            <li>Touring</li>
+          </ul>
+        </div>
+        <div class="discover-panel sub-panel">
+          <h3>Discover</h3>
+          <ul>
+            <li>Artists</li>
+            <li>Songs</li>
+            <li>Albums</li>
+          </ul>
+        </div>
+      </div>
+      <div class="control-panel mobile">
+        <div class="listen-button">
+          <h3>Listen</h3>
+          <svg width="45px" height="45px" xmlns="http://www.w3.org/2000/svg">
+            <image href="./images/listen.svg" />
+          </svg>
+        </div>
+        <div class="watch-button">
+          <h3>Watch</h3>
+          <svg width="45px" height="45px" xmlns="http://www.w3.org/2000/svg">
+            <image href="./images/watch.svg" />
+          </svg>
+        </div>
+        <div class="experience-button">
+          <h3>Experience</h3>
+          <svg width="45px" height="45px" xmlns="http://www.w3.org/2000/svg">
+            <image href="./images/experience.svg" />
+          </svg>
+        </div>
+        <div class="discover-button">
+          <h3>Discover</h3>
+          <svg width="45px" height="45px" xmlns="http://www.w3.org/2000/svg">
+            <image href="./images/discover.svg" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- This is where we will learn flex and grid. This section has two parts: 
+     a top artists grid of the top 6 artists and a live experiences grid. They 
+     will be held together by this flex section. -->
+    <section class="main-area">
+      <div class="top-artists">
+        <div class="main-area-heading">
+          <h2>Top Artists</h2>
+          <div class="show button" id="show-all-button">Show All</div>
+        </div>
+        <div class="artists-container">
+          <div class="artist-1 artist-wrapper">
+            <div class="artist-name">Daft Punk</div>
+            <img src="./images/artist-1.png" alt="Daft Punk">
+            <div class="artist-buttons">
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Listen">
+                <title>Listen</title>
+                <image href="./images/listen.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Shop for merch">
+                <title>Shop for merch</title>
+                <image href="./images/shopping.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Upcoming events">
+                <title>Upcoming events</title>
+                <image href="./images/tour-dates.svg" />
+              </svg>
+            </div>
+          </div>
+          <div class="artist-2 artist-wrapper">
+            <div class="artist-name">Lana Del Rey</div>
+            <img src="./images/artist-2.png" alt="Lana Del Rey">
+            <div class="artist-buttons">
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Listen">
+                <title>Listen</title>
+                <image href="./images/listen.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Shop for merch">
+                <title>Shop for merch</title>
+                <image href="./images/shopping.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Upcoming events">
+                <title>Upcoming events</title>
+                <image href="./images/tour-dates.svg" />
+              </svg>
+            </div>
+          </div>
+          <div class="artist-3 artist-wrapper">
+            <div class="artist-name">Avicii</div>
+            <img src="./images/artist-3.png" alt="Avicii">
+            <div class="artist-buttons">
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Listen">
+                <title>Listen</title>
+                <image href="./images/listen.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Shop for merch">
+                <title>Shop for merch</title>
+                <image href="./images/shopping.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Upcoming events">
+                <title>Upcoming events</title>
+                <image href="./images/tour-dates.svg" />
+              </svg>
+            </div>
+          </div>
+          <div class="artist-4 artist-wrapper">
+            <div class="artist-name">Beyonce</div>
+            <img src="./images/artist-4.png" alt="Beyonce">
+            <div class="artist-buttons">
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Listen">
+                <title>Listen</title>
+                <image href="./images/listen.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Shop for merch">
+                <title>Shop for merch</title>
+                <image href="./images/shopping.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Upcoming events">
+                <title>Upcoming events</title>
+                <image href="./images/tour-dates.svg" />
+              </svg>
+            </div>
+          </div>
+          <div class="artist-5 artist-wrapper" id="artist-5">
+            <div class="artist-name">A$AP ROCKY</div>
+            <img src="./images/artist-5.png" alt="A$AP ROCKY">
+            <div class="artist-buttons">
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Listen">
+                <title>Listen</title>
+                <image href="./images/listen.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Shop for merch">
+                <title>Shop for merch</title>
+                <image href="./images/shopping.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Upcoming events">
+                <title>Upcoming events</title>
+                <image href="./images/tour-dates.svg" />
+              </svg>
+            </div>
+          </div>
+          <div class="artist-6 artist-wrapper" id="artist-6">
+            <div class="artist-name">Mark Ronson</div>
+            <img src="./images/artist-6.png" alt="Mark Ronson">
+            <div class="artist-buttons">
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Listen">
+                <title>Listen</title>
+                <image href="./images/listen.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Shop for merch">
+                <title>Shop for merch</title>
+                <image href="./images/shopping.svg" />
+              </svg>
+              <svg width="13.5px" height="13.5px" 
+              xmlns="http://www.w3.org/2000/svg" title="Upcoming events">
+                <title>Upcoming events</title>
+                <image href="./images/tour-dates.svg" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="experience-area">
+        <div class="experience-area-heading">
+          <h2>Live Experience</h2>
+          <!-- I think this div is going to act like a button -->
+          <div class="show button">Show All</div>
+        </div>
+        <div class="show-container">
+          <div class="show-1">
+            <img src="./images/show-1.png" alt="">
+            <h3>Coachella</h3>
+            <p>
+              Experience the ultimate fusion of music, art, and culture at
+              Coachella, the iconic music and arts festival set against the
+              breathtaking backdrop of the California desert.<br /><br />
+              Join thousands of music enthusiasts from around the world as
+              they gather to celebrate creativity, diversity, and the thrill
+              of live performances.
+            </p>
+            <div class="check-dates button">
+              <svg width="13.5px" height="13.5px" xmlns="http://www.w3.org/2000/svg">
+                <image href="./images/tour-dates.svg" />
+              </svg>
+              Check Dates
+            </div>
+          </div>
+          <div class="show-2">
+            <img src="./images/show-2.png" alt="">
+            <h3>Music of the Spheres World Tour</h3>
+            <p>
+              Join Coldplay on an extraordinary adventure as they embark on
+              their highly anticipated Music of the Spheres World Tour,
+              captivating audiences across the globe with their electrifying
+              performances.
+            </p>
+            <div class="check-dates button">
+              <svg width="13.5px" height="13.5px" xmlns="http://www.w3.org/2000/svg">
+                <image href="./images/tour-dates.svg" />
+              </svg>
+              Check Dates
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- This section also has two parts: a song queue and a list of featured TOP works. 
+     It uses flex and grid in its inner elements. -->
+    <section class="right-controls">
+      <div class="queue">
+        <h3>Queue</h3>
+        <div class="queue-container">
+          <div class="queue-1 song-container">
+            <img src="./images/queue-1.png" alt="">
+            <span class="song-title">Happiness</span>
+            <p>IAMX</p>
+          </div>
+          <div class="queue-2 song-container">
+            <img src="./images/queue-2.png" alt="">
+            <span class="song-title">Homemade Dynamite Remix</span>
+            <p>Lorde, Khalid, Post Malone, SZA</p>
+          </div>
+          <div class="queue-3 song-container">
+            <img src="./images/queue-3.png" alt="">
+            <span class="song-title">Hey Brother</span>
+            <p>Avicii</p>
+          </div>
+        </div>
+      </div>
+      <div class="featured-works">
+        <h3>Check out my other<br>TOP works!</h3>
+        <!-- I've noticed for a list of div elements. He creates a container that
+         holds all of the elements. Then, each element is classified with indexed
+         class names. -->
+        <div class="work-container">
+          <div class="work-1">
+            <!-- the target attribute specifies where the linked resource will 
+             open when the link is clicked. In this case, when target equals 
+             _blank, clicking the link will open the destination URL in a 
+             new browser tab or window, depending on the user's browser settings -->
+            <a href="https://maheelllc.github.io/sign-up/" target="_blank">
+              <!-- This p (text) element is wrapped by an a (link) element 
+               making this text become a link to my github. -->
+              <p>Sign-up Form</p>
+              <img src="./images/proj-1.png" class="work-img" alt="project 1 image">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <image href="./images/github.svg" />
+              </svg>
+            </a>
+          </div>
+          <div class="work-2">
+            <!-- link now encompasses all 3 inner elements. Clicking any one of 
+             these 3 inner elements will take you to the same link. -->
+            <a href="https://github.com/MaheelLLC/calculator" target="_blank">
+              <!-- project title -->
+              <p>Calculator</p>
+              <!-- project image -->
+              <img src="./images/proj-2.png" class="work-img" alt="project 2 image">
+              <!-- github icon -->
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <image href="./images/github.svg" />
+              </svg>
+            </a>
+          </div>
+          <div class="work-3">
+            <a href="https://github.com/MaheelLLC/etch-a-sketch" target="_blank">
+              <!-- etch a sketch project title -->
+              <p>Etch-A-Sketch</p>
+              <!-- etch a sketch project image -->
+              <img src="./images/proj-3.png" class="work-img" alt="project 3 image">
+              <!-- github icon -->
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <image href="./images/github.svg" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <!-- here is the container for the center div in the footer. It kinda
+       acts like a media control bar for the current song being played. -->
+      <div class="current-song">
+        <img src="./images/footer/song.png" alt="current song">
+        <div>
+          <span class="song-title">I Feel It Coming</span>
+          <p>The Weeknd, Daft Punk</p>
+        </div>
+      </div>
+      <div class="player-controls">
+        <div class="slider">
+          <p>1:04</p>
+          <input type="range" min="0" max="269" value="64" id="slider">
+          <p>4:29</p>
+        </div>
+        <div class="control-buttons">
+          <!-- this svg image acting as a shuffle button (media control button) -->
+          <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" class="shuffle-button">
+            <image href="./images/footer/shuffle-icon.svg" />
+          </svg>
+          <!-- previous song button -->
+          <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" class="previous-button">
+            <image href="./images/footer/previous.svg" />
+          </svg>
+          <!-- play button -->
+          <svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" class="play-button">
+            <image href="./images/footer/play.svg" />
+          </svg>
+          <!-- skip current song button -->
+          <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" class="skip-button">
+            <image href="./images/footer/skip.svg" />
+          </svg>
+          <!-- repeat song -->
+          <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" class="repeat-button">
+            <image href="./images/footer/repeat-icon.svg" />
+          </svg>
+        </div>
+      </div>
+      <div class="personal-logo">
+        <a href="https://github.com/MaheelLLC" target="_blank">
+          <img src="./images/logo.png" style="height: 50px;" alt="logo">
+        </a>
+      </div>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

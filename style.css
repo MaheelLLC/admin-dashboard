@@ -1,0 +1,1207 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove border for focused elements */
+*:focus {
+  outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* Set core body defaults */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Ensure consistent default font family and size */
+html, body, button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default margin from common block elements */
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove default padding and margin from table elements */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0;
+}
+
+/* Set image defaults */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Set form element defaults */
+button, input, textarea, select {
+  margin: 0; /* Remove the margin in Firefox and Safari */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.15;
+  color: inherit;
+  border: none;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+/* Remove inner border and padding in Firefox */
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Restore focus styles unset by the previous rule */
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* Remove additional ':invalid' styles in Firefox */
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/* Remove default styles for anchor tags without class */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: inherit;
+}
+
+/* Miscellaneous */
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid;
+  color: inherit;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp, pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/* Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  /* -webkit-appearance: textfield; */
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* Remove blue color and underline for web links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* MY CODE BEGINS HERE */
+
+/* font face definitions for inter font family */
+
+/* this is a CSS at-rule used to define a custom font that can be loaded
+and used in the webpage. It allows you to specify font files hosted locally or 
+from external URLs */
+@font-face {
+  /* the name of the custom font. You can use this name later in your CSS styles */
+  font-family: Inter;
+  /* the next two are exactly as they are named. style can either be normal,
+  italicized, or oblique (similar to italicized) */
+  font-style: normal;
+  font-weight: 400;
+  /* we specify the location of the font file and the format of the font file,
+  helping the browser to determine compability */
+  src: url("./fonts/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: normal;
+  src: url("./fonts/Inter-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 600;
+  src: url("./fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+/* global body styles */
+body {
+  /* set the font used throughout the webpage to Inter */
+  font-family: Inter;
+  /* set body height to 100% of the viewport height. Fill the entire screen 
+  height */
+  height: 100vh;
+  /* make the background black */
+  background-color: #000000;
+  /* make the text color white */
+  color: white;
+}
+
+.container {
+  /* sets the container to use Grid, enabling precise control of rows and columns */
+  display: grid;
+  /* this allows child elements to be absolutely positioned relative to this container */
+  position: relative;
+  /* defines 3 columns with flexible sizing
+  first column: minimum width of 70px, maximum of 1 fraction of the available space
+  second column: minimum width of 380px, maximum: 3 fractions of available space
+  third column: minimum: 225px, maximum: 1 fraction of available space */
+  grid-template-columns: minmax(70px, 1fr) minmax(380px, 3fr) minmax(225px, 1fr);
+  /* defines 3 rows
+  auto: the first row automatically adjusts to fit its content
+  1fr: the second row takes up all remaining space
+  130px: the third row has a fixed height of 130px */
+  grid-template-rows: auto 1fr 130px;
+  /* adds 20px inside the container on all 4 sides */
+  padding: 20px;
+  /* sets 20px space between grid items (both rows and columns) */
+  gap: 20px;
+  /* sets the maximum width for the container, limiting its size even on large screns */
+  max-width: 1512px;
+  /* top/bottom margin: 0 (no space), 
+  left/right margin: auto (automatically balances space on both sides */
+  margin: 0 auto;
+}
+
+.header {
+  /* the .header element should start at column 2 and end at column 4 but not
+  including column 4. In reality, we start at column line 2 and end at column 
+  line 4, spanning 2 full columns. */
+  grid-column: 2 / 4;
+  /* we've made .header as another grid container */
+  display: grid;
+  /* It has 2 columns (3 column lines).
+  first column: minimum = 380px, maximum = 3 fraction spaces
+  second column: minimum = 225px, maximum = 1 fraction space */
+  grid-template-columns: minmax(380px, 3fr) minmax(225px, 1fr);
+  /* This centers everything inside the .header both horizontally and vertically */
+  place-items: center;
+  /* This hides anything that overflows the .header container */
+  overflow: hidden;
+}
+
+.search h3 {
+  /* hide the word "search" */
+  display: none;
+}
+
+.greeting {
+  /* give it the custom Poppins font */
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  /* use the normal version of Poppins */
+  font-style: normal;
+  /* make it bold */
+  font-weight: 600;
+  /* make the text 36px */
+  font-size: 36px;
+  /* make each text line 40px */
+  line-height: 40px;
+  /* custom spacing between characters */
+  letter-spacing: 0.05em;
+  /* puts a 20px space between flex children */
+  gap: 20px;
+  /* make this greeting take up most of the header's width */
+  width: 95%;
+  /* text color is now white */
+  color: white;
+  /* make it into a flex container */
+  display: flex;
+  /* vertically center children */
+  align-items: center;
+  /* put as much space as possible between children. The gap is probably a 
+  minimum */
+  justify-content: space-between;
+  /* add 20px space inside container */
+  padding: 20px;
+}
+
+.menu {
+  /* give the menu items the custom Poppins font */
+  font-family: "Poppins";
+  /* use the normal Poppins font specifically (just not italicized) */
+  font-style: normal;
+  /* text is regular weight (not bold) */
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: white;
+  /* make the menu 80% of the header's width? look this one up */
+  width: 80%;
+  display: flex;
+  /* make flex items that extend past the flex container go to the next line 
+  instead */
+  flex-wrap: wrap;
+  /* make flex items have horizontal space between them */
+  justify-content: space-between;
+  /* puts both horizontal and vertical space between flex items (children). It's
+  also vertical because of flex wrap */
+  gap: 15px;
+}
+
+.menu > div {
+  display: flex;
+  gap: 5px;
+  /* aligns flex children (another way of saying html children since this is a
+  flex container) vertically in the center */
+  align-items: center;
+}
+
+/* search bar */
+.search {
+  width: 100%;
+  /* put a pure white 1px border around this element */
+  border: 1px solid #ffffff;
+  /* make the border round the corners */
+  border-radius: 11px;
+  padding: 10px;
+  /* so the inner element can fit right inside the search bar container */
+  box-sizing: border-box;
+}
+
+.search form {
+  width: 85%;
+}
+
+.search input[type="text"] {
+  /* no border */
+  border: none;
+  /* removes the border (outline) that the browser makes when the element is 
+  focused or active */
+  outline: none;
+  /* the entire input field becomes black interestingly */
+  background-color: #000000;
+  /* text color is white */
+  color: #ffffff;
+  /* now it fits within the search container. */
+  width: 100%;
+}
+
+/* End of header section */
+
+/* sidebar section */
+.sidebar {
+  display: grid;
+  /* two grid rwos, 1st is 140px and 2nd takes the rest of the space */
+  grid-template-rows: 140px 1fr;
+  /* it's also a grid child that takes up the top two rows */
+  grid-row: 1 / 3;
+  /* we can center our items (grid children) as such. Each grid cell will have
+  its contents centered. */
+  place-items: center;
+  /* put 20px between the two rows */
+  gap: 20px;
+}
+
+.music-logo {
+  /* grid-area: row-start / column-start / row-end / column-end
+  this line is short for grid-area: 1 / 1 / auto / auto;
+  The element is placed in the intersection of the 1st row and 1st column in 
+  the grid */
+  grid-area: 1 / 1;
+}
+
+.music-logo a {
+  place-items: center;
+}
+
+.music-logo img {
+  /* keep the image inside the container */
+  width: 100%;
+  /* the biggest it gets is 100px */
+  max-width: 100px;
+}
+
+.control-panel {
+  /* flex container */
+  display: flex;
+  /* flex items will now line up vertically */
+  flex-direction: column;
+  /* space out 11px between flex items */
+  gap: 11px;
+  /* vertically aligns the panel to the top of grid cell */
+  align-self: start;
+  width: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+ul li,
+.button,
+.artist-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  /* each line of text gets 25px */
+  line-height: 25px;
+  letter-spacing: 0.05em;
+}
+
+h3,
+.song-title {
+  font-family: "Poppins";
+  font-style: normal;
+  /* it's bold now... */
+  font-weight: 700;
+  font-size: 15px;
+  /* the height of each line of text will be 110% of the font size */
+  line-height: 110%;
+  letter-spacing: 0.05em;
+}
+
+.sub-panel {
+  border: 1.2px solid #585858;
+  border-radius: 18.1px;
+  padding: 10px 20px;
+  /* shorthand for flex: 1 1 0.
+  flex-grow: 1 (allows item to grow proportional to other items (flex children)) 
+  flex-shrink: 1 (allows the item to shrink if the container is smaller than
+  the total width of the flex items.)
+  flex-basis: 0 (sets the inital size of the item with 0) */
+  flex: 1;
+}
+
+.listen-button svg,
+.watch-button svg,
+.experience-button svg,
+.discover-button svg {
+  /* flex items are ordered by value (like an index). A -1 index puts an item
+  before the other ones in the flex container. These buttons appear before other
+  flex items with a default order of 0. */
+  order: -1;
+}
+
+.sub-panel ul {
+  padding: 8px;
+}
+
+/* main-area children */
+
+/* We're just talking about the Top Artists title here */
+h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38px;
+  letter-spacing: 0.05em;
+}
+
+/* the actual main area of the website */
+.main-area {
+  display: flex;
+  flex-direction: column;
+  /* 20px space between flex items */
+  gap: 20px;
+}
+
+/* tbe main area comprises of two parts (elements) experience-area and 
+top-artists */
+.experience-area,
+.top-artists {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background: #121212;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.main-area-heading,
+.experience-area-heading {
+  display: flex;
+  /* Puts the max amount of space between every flex item (no beginning or end
+  spaces)
+  place all of the available space between Top Artists and show all */
+  justify-content: space-between;
+  /* makes all flex items (direct children of this flex container) align 
+  vertically in the center */
+  align-items: center;
+}
+
+.artists-container {
+  /* the span keyword tells the grid item to span across a specific number of 
+  columns starting from its current position. In this case, the grid item will 
+  span 2 columns. Since the parent of this element is a flex container, this
+  line is commented out. */
+  /* grid-column: span 2; */
+  display: grid;
+  /* the magic lines
+  The repeat function is a shorthand to create multiple columns. auto-fit means
+  the grid will automatically create as many columns as can fit within the 
+  container, based on the available space (it auto fits the grid items.
+  Now, what determines if there is enough available space for a grid item to be
+  added to a row or column? 
+  The minmax function answers this. It defines the minimum and maximum size of 
+  each column. In this case, each column will be at least 140px wide (needs at
+  least 140px of available space, but it can grow to a maximum of 1fr. So what
+  goes on is that the grid tries to fit as many 140px items as it can per row 
+  (since each one takes up a column), then, if there is any available space 
+  remaining, the items will grow to somewhere between 140px and 1fr (included). */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+  align-items: center;
+  gap: 25px;
+}
+
+/* this only affects divs that are direct children of .artists-container */
+.artists-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.artist-wrapper img {
+  /* put it at the top of the flex list */
+  order: -1;
+  filter: grayscale(100%);
+}
+
+/* all direct children of artist-buttons (3 svg elements actually) */
+.artist-buttons > * {
+  /* provides a little spacing between the buttons 
+  margin top and bottom are 0px while margin right and left are 2.5px */
+  margin: 0px 2.5px;
+}
+
+/* so the "Show All" option actually works, we're gonna hide the last two 
+singers when we can fit the first four singers in the first row. */
+#artist-5,
+#artist-6 {
+  display: none;
+}
+
+/* Experience Area begins. Experience Area comprises of the 
+experience-area-heading and its main content: show-container. */
+.show-container {
+  display: grid;
+  /* repeat makes multiple columns. How many? auto-fit tells the grid to create
+  as many as it can fit within the grid. How do we know how many columns we can
+  fit? minmax tells grid that each column needs at least 200px and can grow up
+  to 1fr if there is any remaining space left in the end. */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* each row will have 30px space between eachother */
+  row-gap: 30px;
+  /* each column will have 20px space between eachother. */
+  column-gap: 20px;
+}
+
+/* every img element inside the experience area section of the main area and 
+every img element inside the 6 artist divs (really the container holding all 
+6 artists) will have these rules. */
+.experience-area img,
+.artists-container img {
+  /* take up 100% of your respective parent container's width */
+  width: 100%;
+  /* let the height keep the aspect ratio with respect to its variable width */
+  height: auto;
+}
+
+/* the show-container (main content of the experience area) has 2 shows (show-1
+and show-2). */
+.show-1,
+.show-2 {
+  /* flexible, (usually) single dimension layout */
+  display: flex;
+  /* make the layout vertical instead of horizontal */
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* to make all of the text consistent, we're gonna apply this rule to all p 
+elements. This includes the text inside each show. Each show also has 
+check dates text. */
+.check-dates,
+p {
+  /* just in case we didn't define it enough lol. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* the space between characters is increased by 5% of the current font size */
+  letter-spacing: 0.05em;
+}
+
+.check-dates {
+  border: 0.5px solid #ffffff;
+  border-radius: 4px;
+  /* remember all elements are content/padding/border/margin */
+  padding: 6px;
+  /* In the DOM, even though Check Dates is just text inside of the div, it's 
+  given its own "element" status as a text node. Thus, the flex items of 
+  check-dates are the svg element and the text node "Check Dates" */
+  display: flex;
+  /* moves flex items to the horizontal center (within the check-dates 
+  container) */
+  justify-content: center;
+  /* moves flex items to the vertical center */
+  align-items: center;
+  gap: 6px;
+  /* This line made the check-dates element shrink and moved to the left. The 
+  parent flex container of check-dates is show-1 or show-2. If show-1 or show-2
+  defined align-items, this line would override it since it specifies the 
+  align rule to this child only. flex-start aligns the item to the start of the 
+  cross-axis (horizontal axis since parent's flex direction is column) in its 
+  parent container (show-1 or show-2). This location is the left side of the
+  show container. Since check-dates is no longer located along the entire 
+  cross-axis of show, it shrunk to fit its contents to the start of show. */
+  align-self: flex-start;
+}
+
+/* end of the experience-area */
+/* start of the right-controls */
+/* the right controls comprises of 2 parts: the queue and featured-works */
+
+.queue,
+.featured-works {
+  background-color: #121212;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.queue {
+  margin-bottom: 20px;
+}
+
+/* the 2 parts' titles */
+.queue h3,
+.featured-works h3 {
+  /* does as it says */
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* each showcased odin project is a link */
+.work-container a {
+  display: grid;
+  /* the first column is a fraction of the available space in the container 
+  after placing the second column. The second column is sized to the size of its
+  content. Because of auto, the column lines may be misaligned within different
+  rows. The column lines may not align vertically between rows. */
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  align-content: center;
+  row-gap: 5px;
+}
+
+.work-img {
+  /* puts the image first in the grid list */
+  order: -1;
+  /* place it in the first two columns */
+  grid-column: 1 / 3;
+  /* ensures that the element stretches to fill the entire width of the grid 
+  area it is assigned to */
+  width: 100%;
+  height: auto;
+  border-radius: 5.5px;
+}
+
+.work-container svg {
+  justify-self: end;
+}
+
+/* queue is separated into 2 entities: the queue h3 title and queue-container */
+.queue-container,
+.work-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* each song in the queue is inside a song-container */
+.song-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* same as auto auto */
+  grid-template-rows: repeat(2, auto);
+  /* aligns the content inside each grid cell vertically to the center of the 
+  cell */
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* the queue songs images */
+.song-container img {
+  /* occupies both rows */
+  grid-row: 1 / span 2;
+  /* when grid-column is 1 value, the grid item will automatically span one
+  column by default. In this case, grid-column: 1 starts at column line 1 and 
+  ends at column line 2. It equals grid-column: 1 / span 1 */
+  grid-column: 1;
+}
+
+.current-song .song-title {
+  /* the element becomes a block-level element. It takes up the entire width of
+  its parent container by default and it starts on a new line, pushing any 
+  following elements below it. */
+  display: block;
+  margin-bottom: 5px;
+}
+
+.song-title,
+.song-container p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.work-container a {
+  /* the text color of <a> elements will inherit the color of their parent 
+  element. */
+  color: inherit;
+  /* remove the underline that <a> elements usually come with */
+  text-decoration: none;
+}
+
+/* footer really begins now (we did a little footer styling above too)
+footer comprises of a current-song section, player controls, and my personal 
+logo */
+footer {
+  height: 120px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  /* fixes the footer to the bottom of the viewport. You can NEVER scroll away 
+  from it. This line removes the footer from the normal document flow and 
+  positions it relative to the browser viewport. */
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  /* don't know why this is here */
+  max-width: 1472px;
+  /* testing things */
+  /* justify-content: space-between; */
+}
+
+.slider,
+.control-buttons {
+  /* the goal is to just to put all of the controls into a single line */
+  display: flex;
+  align-items: center;
+}
+
+.control-buttons {
+  gap: 20px;
+}
+
+.slider {
+  width: 70%;
+}
+
+.slider input[type="range"] {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.shuffle-button,
+.repeat-button {
+  margin: 0 20px;
+}
+
+.player-controls {
+  display: flex;
+  /* the player controls will grow and shrink 3 times faster than its flex 
+  siblings (personal-logo and current-song) */
+  flex: 3 3 0;
+  /* center the controls horizontally since flex-direction is column */
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.current-song {
+  flex: 1;
+  /* left and right padding are 20px */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.personal-logo {
+  flex: 1 2 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* let's customize our slider for the player controls */
+input[type="range"] {
+  /* removes the default browser styling for browsers that use the WebKit 
+  rendering engine (safari, older versions of Chrome) */
+  -webkit-appearance: none;
+  /* removes the default browser styling for rest of the browsers (most
+  modern browsers) */
+  appearance: none;
+  /* removes any default background color or design for the slider */
+  background: transparent;
+  /* changes the cursor to a pointer when you hover over the slider */
+  cursor: pointer;
+  /* set's the width of the slider to 15 times the root font size (usually its
+  10px) */
+  width: 15rem;
+}
+
+/* now that we've removed the original slider and set up its proper length */
+/* let's style it for chrome, safari, opera, and edge */
+input[type="range"]::-webkit-slider-runnable-track {
+  /* make the slider orange */
+  background: #ff7629;
+  height: 2px;
+}
+
+/* now firefox */
+input[type="range"]::-moz-range-track {
+  background: #ff7629;
+  height: 2px;
+}
+
+/* the slider has a circle that shows where on the slider you are, we call it
+the thumb */
+input[type="range"]::-webkit-slider-thumb {
+  /* overrider the default look */
+  -webkit-appearance: none;
+  appearance: none;
+  /* this moves the thumb to the slider vertically */
+  margin-top: -8px;
+  background-color: #ffffff;
+  width: 4px;
+  height: 20px;
+}
+
+/* now do it for firefox */
+input[type="range"]::-moz-range-thumb {
+  border: none;
+  border-radius: 0px;
+  background-color: #ffffff;
+  width: 4px;
+  height: 20px;
+}
+
+/* end of footer */
+
+/* to increase interactivity, we can add pseudo-classes. Specifically, we only
+want things to happen when we hover the elements with our mouse */
+
+/* we want list items to underline when we hover over them */
+li:hover {
+  text-decoration: underline;
+}
+
+/* everything else that looks clickable should turn orange when we hover over 
+them */
+li:hover,
+.artist-name:hover,
+.menu .home:hover,
+.menu .settings:hover,
+.menu svg:hover image,
+.button:hover,
+.artist-buttons > *:hover,
+.song-container:hover,
+.show-1 h3:hover,
+.show-2 h3:hover,
+.mobile > div:hover,
+.work-container svg:hover,
+.work-container a p:hover,
+/* hits svg elements that are direct children of an element with the class 
+.control-buttons. However, it excludes svg elements that have the class 
+play-button. */
+.control-buttons > svg:not(.play-button):hover,
+.artist-buttons svg:hover image {
+  color: #ff7629;
+  /* filter: invert(54%) sepia(68%) saturate(220%) hue-rotate(340deg) 
+    brightness(102%) contrast(105%); */
+}
+
+.play-button:hover {
+  /* the filter property applies visual effects to the .play-button element.
+  sepia converts the colors into shades of brown. saturate adjusts the 
+  saturation of colors, 67% reduces the saturation, making the colors appear
+  less vibrant. hue-rotate rotates the hues of the element's colors around 
+  the color wheel by 265 degrees. brightness is obvious. contrast adjusts the
+  contrast between light and dark areas of the element. */
+  filter: saturate(67%) sepia(60%) hue-rotate(265deg) brightness(117%)
+    contrast(100%);
+}
+
+/* zuko profile pic and queue song pics */
+.song-container:hover img,
+.greeting img:hover {
+  transform: scale(1.04);
+  filter: sepia(80%);
+}
+
+/* LEARN THIS TOO */
+/* the 6 artist pictures */
+.artist-wrapper img:hover,
+/* this style applies to an img element that is an immediate sibling of an
+.artist-name element (only when .artist-name is hovered over) */
+.artist-name:hover + img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+/* TOP works pics */
+.work-container img:hover {
+  border: 1px solid #ff7629;
+  border-radius: 5.5px;
+  transform: scale(1.04);
+  filter: brightness(120%);
+}
+
+/* both of my personal logos */
+.music-logo:hover,
+.personal-logo a:hover {
+  transform: scale(1.1);
+}
+
+.artist-buttons svg:hover {
+  border-radius: 2px;
+  background-color: #ff7629;
+  cursor: pointer;
+}
+
+#show-all-button {
+  cursor: pointer;
+}
+/* media-queries (this is for differnt screen sizes (mobile compatibility) */
+/* if the screen is 950 pixels or less */
+@media (max-width: 950px) {
+  /* keep the top artists into 2 columns only */
+  .artists-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player-controls {
+    display: none;
+  }
+}
+
+@media (max-width: 1117px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mobile div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile h3 {
+    font-size: 1.6vw;
+  }
+
+  .mobile image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1251px) {
+  .menu {
+    flex-direction: column;
+    padding-left: 20%;
+    /* border-box ensures that an element's width and height include its padding
+    and border, simplifying layout calculations and making element sizes more
+    predictable. The default box-sizing value is content-box. In context-box,
+    when you set the height or weight of an element, you are only sizing the 
+    content area of the element. For example, if an element has 10px padding
+    and 5px border (on all sides), then, if you set the width of the element
+    to be 200p, the actual width of the element will be 200 + 10*2 + 5*2 = 230px
+    With border-box, the actual width of the element will be 200px. */
+    box-sizing: border-box;
+  }
+
+  .search {
+    /* tells the browser to calculate the element's width automatically based on
+    the element's content, padding, border, and available space in its 
+    container. For a block element, it takes up the entire width of its 
+    container. For an inline element, it's width is determined by its content */
+    width: auto;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+
+  .search form {
+    display: none;
+  }
+
+  .search h3 {
+     display: inline;
+  }
+}
